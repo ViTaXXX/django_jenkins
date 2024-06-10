@@ -29,7 +29,7 @@ pipeline {
                 }
                 stage('Test') {
                     steps {
-                        sh 'python manage.py test --settings=django_tutorial.desarollo'
+                        sh 'python manage.py test'
                     }
                 }
             }
