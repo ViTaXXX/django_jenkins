@@ -1,6 +1,11 @@
 pipeline {
     environment {
         LOGIN = 'USER_DOCKERHUB'
+	DB_NAME = 'django'
+        DB_USER = 'django'
+        DB_PASSWORD = 'django'
+        DB_HOST = 'mariadb'
+        DB_PORT = '3306'
     }
     agent any
     stages {
