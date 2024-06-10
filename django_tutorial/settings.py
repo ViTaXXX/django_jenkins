@@ -82,27 +82,27 @@ WSGI_APPLICATION = 'django_tutorial.wsgi.application'
 #    }
 #}
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST'),
-        'PORT': '3306',
-    }
-}
-
 #DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.mysql',
-#        'NAME': os.getenv('DB_NAME', 'django'),
-#        'USER': os.getenv('DB_USER', 'django'),
-#        'PASSWORD': os.getenv('DB_PASSWORD', 'django'),
-#        'HOST': os.getenv('DB_HOST', 'mariadb'),
-#        'PORT': os.getenv('DB_PORT', ''),
+#        'NAME': os.environ.get('DB_NAME'),
+#        'USER': os.environ.get('DB_USER'),
+#        'PASSWORD': os.environ.get('DB_PASSWORD'),
+#        'HOST': os.environ.get('DB_HOST'),
+#        'PORT': '3306',
 #    }
 #}
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.getenv('DB_NAME', 'django'),
+        'USER': os.getenv('DB_USER', 'django'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'django'),
+        'HOST': os.getenv('DB_HOST', 'mariadb'),
+        'PORT': os.getenv('DB_PORT', '3306'),
+    }
+}
 
 
 
