@@ -16,6 +16,9 @@ services:
       - 8082:8002
     depends_on:
       - mariadb
+    networks:
+      - mynetwork
+
   mariadb:
     container_name: mariadb
     image: mariadb
@@ -27,5 +30,13 @@ services:
       MYSQL_ROOT_PASSWORD: admin
     volumes:
       - mariadb:/var/lib/mysql
+    networks:
+      - mynetwork
+
 volumes:
     mariadb:
+
+
+networks:
+  mynetwork:
+    driver: bridge
